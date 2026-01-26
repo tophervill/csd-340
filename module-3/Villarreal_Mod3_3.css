@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+ol,
+ul {
+  font-weight: 300;
+}
+
+.side-by-side {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Left Div */
+#left {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#left ol {
+  list-style-position: inside;
+}
+
+/* Right Div */
+#right {
+  border: 1px dashed red;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#right ul {
+  list-style-type: upper-roman;
+  list-style-position: inside;
+}
+
+/* Bottom Div */
+#last-div {
+  width: 100%;
+  margin-top: 60%;
+  margin-bottom: 20px;
+}
+
+a {
+  float: right;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
