@@ -1,0 +1,42 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1, h3, figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+}
+
+h1, h3, figcaption {
+    color: teal;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;;
+    margin-top: 10%;
+}
+
+#image-gallery div {
+    border: 1px solid #810808;
+    padding: 10px;
+    text-align: center;
+}
+
+/* To prevent overflow from large images*/
+img {
+    width: 100%;
+}
+
+a {
+  float: right;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
