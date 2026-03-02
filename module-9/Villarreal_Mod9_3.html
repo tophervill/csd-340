@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <meta name="description" content="CSD 340 Module 2 Assignment 2 with an introduction and personal background of the author.">
+    <meta name="keywords" content="CSD340, HTML, CSS, Web Development">
+    <meta name="author" content="Christopher Villarreal">
+    <meta name="robots" content="nofollow">
+
+    <link rel="stylesheet" href="Villarreal_Mod9_3.css">
+</head>
+ 
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Chapter 2 : About Me</h2>
+        
+        <p class="intro">
+            Hello! My name is Christopher Villarreal, and I am currently pursuing a Bachelor's degree in <span id="hidden1">_______</span>. For as long as I could remember, I have always been fascinated by technology and how software can solve real-world problems. This passion has driven me to further my education and skills in this field.
+        </p>
+
+        <p>
+            I grew up in <span id="hidden2">_______</span>, and I've lived around a busy city environment most of my life. Being around so many different people and places has helped me stay open-minded and adaptable. I like learning skills that feel practical, because I want to build things people can actually use.
+        </p>
+
+        <p>
+            Aside from the obvious of enjoying technology, I also have interest in things like aquariums, anime, and music! I have two aquariums at home, one is a 5-gallon and the other is a 10-gallon, which both house <span id="hidden3">_______</span>. <span class="sentence">I am currently watching the latest season of <span id="hidden4">_______</span>, which is one of my favorite anime series at the moment.</span>
+        </p>
+
+        <p>
+            Overall, I'm someone who values learning at my own pace and always choosing to be hands on. I tend to enjoy activities where I can see progress over time, whether that's improving a skill or maintaining a routine. Taking things step by step helps me stay focused and motivated, especially when balancing school, work, and a personal life.
+        </p>
+
+        <p>
+            <button type="button" onclick="document.getElementById('hidden1').textContent = word1;">Software Development</button>
+        </p>
+        <p>
+            <button type="button" onclick="document.getElementById('hidden2').textContent = word2;">Southern California</button>
+        </p>
+        <p>
+            <button type="button" onclick="document.getElementById('hidden3').textContent = word3;">Neocaridina Cherry Shrimps</button>
+        </p>
+        <p>
+            <button type="button" onclick="document.getElementById('hidden4').textContent = word4;">Jujutsu Kaisen</button>
+        </p>
+
+        <hr>
+
+        <address>
+            <p><a href="https://www.bellevue.edu/">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+
+    </div>
+
+    <script>
+        // JavaScript Variables with the hidden information
+        const word1 = "Software Development";
+        const word2 = "Southern California";
+        const word3 = "Neocaridina Cherry Shrimps";
+        const word4 = "Jujutsu Kaisen";
+    </script>
+ 
+</body>
+ 
+</html>
