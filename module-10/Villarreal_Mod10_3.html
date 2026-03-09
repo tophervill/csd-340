@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Villarreal_Mod10_3.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+        <!-- Aquarium Image -->
+        <p>Click on the image to see the transition of my Cherry Shrimp Aquarium Tank!</p>
+        <img id="aquarium" src="aquarium_1.jpg" alt="photo of aquarium" width="325" height="500" onclick="changeAquarium()">
+        <!-- Cat Image -->
+        <p>Click on the image below to view my brother's cat growing up.</p>
+        <img id="cat" src="cat_01.jpg" alt="photo of brother's cat" width="350" height="500" onclick="changeCat()">
+
+        <footer>
+            <a href="../index.html">Return to landing page</a>
+        </footer>
+    </div>
+    <script>
+        function changeAquarium() {
+            // Changes the image for #aquarium upon clicking
+            let image = document.getElementById('aquarium');
+
+            if (image.src.includes('aquarium_1.jpg')) {
+                image.src = "aquarium_2.jpg";
+            }  else {
+                image.src = "aquarium_1.jpg";
+            }
+        }
+
+        // Changes the image for #cat upon clicking
+        function changeCat() {
+            let image = document.getElementById('cat');
+
+            if (image.src.includes('cat_01.jpg')) {
+                image.src = "cat_02.jpg";
+            } else {
+                image.src = "cat_01.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
