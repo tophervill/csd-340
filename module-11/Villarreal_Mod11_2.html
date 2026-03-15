@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Villarreal_Mod11_2.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+        <form>
+            <label for="task">
+                Enter a task below, then click "Add" to save it. You can view, delete,
+                or sort entries using the buttons.
+            </label>
+            <input name="task" id="task" type="text" placeholder="Enter a task.">
+
+            <div id="buttons">
+                <button type="button" id="add" onclick="addTask()">Add</button>
+                <button type="button" id="delete" onclick="deleteLastTask()">Delete Last Entry</button>
+                <button type="button" id="sort" onclick="sortTasks()">Sort</button>
+            </div>
+        </form>
+
+        <br>
+        <div id="taskOutput"></div>
+    </div>
+    <footer>
+        <a href="../index.html">Return to landing page</a>
+    </footer>
+    <script>
+        let tasks = [];
+
+        //  Function adds tasks once the #add button is clicked
+        function addTask() {
+            let taskInput = document.getElementById('task');
+            let task = taskInput.value.trim();
+
+            if (task === "") {
+                alert('Please enter a task first.');
+                return;
+            }
+
+            tasks.push(task);
+            alert("Item: [" + task + "] was added to your list.");
+            taskInput.value = "";
+            displayTasks();
+        }
+
+        // Function displays tasks to the #taskOutput div
+        function displayTasks() {
+            let output = document.getElementById('taskOutput');
+            let displayText = "<h3>To Do List:</h3>";
+
+            for (let i = 0; i < tasks.length; i++) {
+                displayText += (i + 1) + ") " + tasks[i] + "<br>";
+            }
+
+            output.innerHTML = displayText;
+        }
+
+        // Function deletes the LAST task
+        function deleteLastTask() {
+            if (tasks.length === 0) {
+                alert('Uh Oh. There are no tasks to delete. Create a task first!');
+                return;
+            }
+
+            let deletedTask = tasks.pop();
+            alert("Item: [" + deletedTask + "] has been deleted.");
+            displayTasks();
+        }
+
+        // Function that will sort tasks
+        function sortTasks() {
+            if (tasks.length === 0) {
+                alert("There are no tasks to sort. Try adding a few tasks first.");
+                return;
+            }
+
+            tasks.sort();
+            alert("The tasks have been sorted.");
+            displayTasks();
+        }
+    </script>
+</body>
+</html>
